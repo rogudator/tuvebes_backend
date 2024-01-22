@@ -2,6 +2,8 @@
 Бэкенд сервиса для лайфлоггинга. Что-то типа CR~~UD~~.
 
 # TODO
-- [ ] Подключить базу
-- [ ] Конфиги
-- [ ] Graceful Shutdown
+- [x] Подключить базу
+- [x] Конфиги
+- [x] Graceful Shutdown
+- [ ] Dockerfile
+- [ ] Docker Compose

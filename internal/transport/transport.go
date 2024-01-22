@@ -1,12 +1,12 @@
 package transport
 
 import (
-	"log"
 	"io"
+	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/rogudator/tuvebes-backend/internal/repository"
 	"github.com/rogudator/tuvebes-backend/internal/entity"
+	"github.com/rogudator/tuvebes-backend/internal/repository"
 )
 
 type Transport struct {
@@ -30,7 +30,7 @@ func (h *Transport) CreateTuvebe(ctx *gin.Context) {
 		log.Println("failed to unmarshall tuvebe:", err.Error())
 		return
 	}
-	h.repo.DB = append(h.repo.DB, t)
+	h.repo.CreateTuvebe(t)
 }
 
 func (h *Transport) GetTuvebes(ctx *gin.Context) {
